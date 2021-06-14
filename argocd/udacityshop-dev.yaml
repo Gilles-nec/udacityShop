@@ -8,7 +8,7 @@ metadata:
 spec:
   source:
     path: kubernetes-manifests/dev
-    repoURL: https://github.com/mcanat843/udacityShop.git
+    repoURL: https://github.com/Gilles-nec/udacityShop.git
     targetRevision: HEAD
   destination:
     namespace: default
