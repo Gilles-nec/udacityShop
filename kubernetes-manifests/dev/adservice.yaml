@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: adservice
-  namespace: dev
 spec:
   selector:
     matchLabels:
@@ -16,7 +15,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: gillesnec/adservice:latest
+        image: ${{ secrets.DOCKERHUB_USERNAME }}/adservice:latest
         ports:
         - containerPort: 9555
         env:
